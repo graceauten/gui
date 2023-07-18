@@ -16,3 +16,15 @@ CREATE TABLE 'status' (
 CREATE TABLE 'tracking' (
 FOREIGN KEY
 );
+
+/* INSERTING REQUIREMENTS */
+/* GATES */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32111', 'An icon shall be selected during detailed design to show a gate in a closed position');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32112', 'An icon shall be selected during detailed design to show a gate in an open position.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32113', 'An icon shall be selected during detailed design to show a gate in a partially open (15%) open position');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32114', 'The gate icon shall be configurable to show the name of the gate with the icon.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32115', 'The gate icon shall be configurable to show the state of the gate (e.g., open or close).');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32116', 'The gate icon shall be configurable to show the status of the gate (operational, failed, or no data). The color of the gate icon shall be changed to show the status of the gate.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32117', 'When the operator moves the mouse over a gate icon a text window shall be displayed showing a summary of the gate status. The details of the summary status display will be defined in the GUI design document.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32118', 'The operator shall be able to activate a detailed device status window for the selected gate by double left clicking on the icon. This action shall cause a circle to be displayed over the gate icon for as long as the detailed device status window is displayed for that gate.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32119', 'The operator shall be able to activate a device control window for the selected gate by right clicking on the icon. The right click on the icons shall display a pop-up menu of available device actions from which the user may select. This action shall cause a circle to be displayed over the gate icon for as long as the device control window is displayed for that gate.');
