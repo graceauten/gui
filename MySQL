@@ -1,1 +1,18 @@
-
+CREATE DATABASE icons;
+USE icons;
+CREATE TABLE 'requirement' (
+'requirementNumber' int NOT NULL,
+'requirementText' varchar(90) NOT NULL,
+PRIMARY KEY ('requirementNumber')
+);
+CREATE TABLE 'priority' (
+'priorityValue' int NOT NULL,
+'priorityText' varchar(25) NOT NULL
+);
+CREATE TABLE 'status' (
+'statusValue' varchar(4) NOT NULL,
+'statusText' varchar(25) NOT NULL
+);
+CREATE TABLE 'tracking' (
+FOREIGN KEY
+);
