@@ -41,9 +41,9 @@ INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32129', 'T
 /* CMS */
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32131', 'An icon shall be selected during detailed design to indicate changeable message signs.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32132', 'An icon shall be selected during detailed design to indicate a changeable message sign that is displaying a message.');
-INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32133', '');
-INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32134', '');
-INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32135', '');
-INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32136', '');
-INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32137', '');
-INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32138', '');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32133', 'The CMS icon shall be configurable to display the name of the sign with the icon.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32134', 'The CMS icon shall be configurable to display an abbreviated message text with the icon.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32135', 'The CMS icon shall be configurable to display the status of the sign associated with the icon. The CMS icon color shall represent the operational status of the CMS sign: green for operational, yellow for operational with errors, gray for no communications and red for failed.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32136', 'If the operator moves the mouse over the CMS icon then a text window shall be displayed with a summary of the operational state and status of the sign and the text of any message being displayed on the sign.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32137', 'The operator shall be able to activate a detailed device status window for the sign by double left clicking on the selected icon. A circle shall be displayed over the icon as long as the detailed device status window is displayed for that icon.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('32138', 'The operator shall be able to activate a device control window for the CMS sign by right clicking on the selected icon. The right click on the icon shall display a pop-up menu of available device actions from which the user may select. A circle shall be displayed over the icon as long as the device control window is displayed for that icon.');
