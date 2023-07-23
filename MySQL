@@ -33,7 +33,7 @@ FROM requirement r, priority p, status s, tracking t
 WHERE t.requirementTrack = r.requirementID
 AND t.priorityTrack = p.priorityValue
 AND t.statusTrack = s.statusValue
-ORDER BY r.requirementNumber;
+ORDER BY r.requirementID;
 
 /* INSERTING REQUIREMENTS */
 /* GATES */
