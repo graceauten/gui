@@ -1,21 +1,40 @@
 CREATE DATABASE icons;
 USE icons;
-CREATE TABLE 'requirement' (
-'requirementNumber' int NOT NULL,
-'requirementText' varchar(90) NOT NULL,
-PRIMARY KEY ('requirementNumber')
+CREATE TABLE requirement (
+requirementID int NOT NULL AUTO_INCREMENT,
+requirementNumber varchar(90) NOT NULL,
+requirementText varchar(90) NOT NULL,
+PRIMARY KEY (requirementNumber)
 );
-CREATE TABLE 'priority' (
-'priorityValue' int NOT NULL,
-'priorityText' varchar(25) NOT NULL
+CREATE TABLE priority (
+priorityValue int NOT NULL AUTO_INCREMENT,
+priorityText varchar(25) NOT NULL,
+PRIMARY KEY (priorityValue)
 );
-CREATE TABLE 'status' (
-'statusValue' varchar(4) NOT NULL,
-'statusText' varchar(25) NOT NULL
+CREATE TABLE status (
+statusValue varchar(4) NOT NULL AUTO_INCREMENT,
+statusText varchar(25) NOT NULL,
+PRIMARY KEY (statusValue)
 );
-CREATE TABLE 'tracking' (
-FOREIGN KEY
+CREATE TABLE tracking (
+trackingID int NOT NULL AUTO_INCREMENT,
+requirementTrack int NOT NULL,
+priorityTrack int NOT NULL,
+statusTrack int NOT NULL,
+PRIMARY KEY (trackingID),
+FOREIGN KEY (requirementTrack) REFERENCES requirement (requirementID),
+FOREIGN KEY (priorityTrack) REFERENCES priority (priorityValue),
+FOREIGN KEY (statusTrack) REFERENCES status (statusValue)
 );
+
+CREATE VIEW trackingView AS
+SELECT r.requirementNumber, r.requirementText, p.priorityText, s.statusText
+FROM requirement r, priority p, status s, tracking t
+WHERE t.requirementTrack = r.requirementID
+AND t.priorityTrack = p.priorityValue
+AND t.statusTrack = s.statusValue
+ORDER BY r.requirementNumber;
+
 
 /* INSERTING REQUIREMENTS */
 /* GATES */
