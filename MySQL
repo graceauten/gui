@@ -3,8 +3,8 @@ USE icons;
 CREATE TABLE requirement (
 requirementID int NOT NULL AUTO_INCREMENT,
 requirementNumber varchar(90) NOT NULL,
-requirementText varchar(90) NOT NULL,
-PRIMARY KEY (requirementNumber)
+requirementText varchar(500) NOT NULL,
+PRIMARY KEY (requirementID)
 );
 CREATE TABLE priority (
 priorityValue int NOT NULL AUTO_INCREMENT,
@@ -12,7 +12,7 @@ priorityText varchar(25) NOT NULL,
 PRIMARY KEY (priorityValue)
 );
 CREATE TABLE status (
-statusValue varchar(4) NOT NULL AUTO_INCREMENT,
+statusValue int NOT NULL AUTO_INCREMENT,
 statusText varchar(25) NOT NULL,
 PRIMARY KEY (statusValue)
 );
@@ -34,7 +34,6 @@ WHERE t.requirementTrack = r.requirementID
 AND t.priorityTrack = p.priorityValue
 AND t.statusTrack = s.statusValue
 ORDER BY r.requirementNumber;
-
 
 /* INSERTING REQUIREMENTS */
 /* GATES */
@@ -73,7 +72,7 @@ INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.4.3'
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.4.4', 'The camera icon shall be configurable to show the status of the camera. The color of the camera icon shall be changed to show the status of the camera.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.4.5', 'When a user moves the mouse over a camera icon a text window shall be displayed showing a summary of the camera status.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.4.6', 'The user shall be able to activate a detailed device status window for the selected camera by double left clicking on the icon. This action shall cause a circle to be displayed over the camera icon for as long as the detailed device status window is displayed for that camera.');
-INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.4.7', 'The user shall be able to activate a device control window for the selected camera by right clicking on the icon. The right click on the icon shall display a pop-up menu of available device actions from which the user may select. This action shall cause a circle to be displayed over the camera icon for as long as the device control window is displayed for that camera.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.4.7', 'The user shall be able to activate a device control window for the selected camera by right clicking on the icon. The right click on the icon shall display a pop-up menu of available device actions from which the user may select. This action shall cause a circle to be displayed over the camera icon for as long as the device control window is displayed for that camera. ');
 /* DRAW LIGHTS */
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.5.1', 'An icon shall be selected during detailed design to indicate a group of draw lights that are off.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.5.2', 'An icon shall be selected during detailed design to indicate a group of draw lights that are on.');
