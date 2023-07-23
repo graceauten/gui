@@ -128,3 +128,13 @@ INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.2
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.3', 'When the operator moves the mouse over an incident icon a text window shall be displayed showing a summary of the incident state. The details of the summary state display will be defined in the GUI design document.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.4', 'The operator shall be able to activate a detailed incident state window for the selected incident by double left clicking on the icon. This action shall cause a circle to be displayed over the incident icon for as long as the detailed device status window is displayed for that incident.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.5', 'The operator shall be able to activate an edit window for the selected incident by right clicking on the icon. This action shall cause a circle to be displayed over the incident icon for as long as the edit window is displayed for that incident.');
+/* PRIORITY */
+INSERT INTO priority (priorityText) VALUE ('High');
+INSERT INTO priority (priorityText) VALUE ('Medium-High');
+INSERT INTO priority (priorityText) VALUE ('Medium');
+INSERT INTO priority (priorityText) VALUE ('Medium-Low');
+INSERT INTO priority (priorityText) VALUE ('Low');
+/* STATUS */
+INSERT INTO status (statusText) VALUE ('Completed');
+INSERT INTO status (statusText) VALUE ('50% Complete');
+INSERT INTO status (statusText) VALUE ('Not Implemented');
