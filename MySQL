@@ -127,6 +127,162 @@ INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.2
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.3', 'When the operator moves the mouse over an incident icon a text window shall be displayed showing a summary of the incident state. The details of the summary state display will be defined in the GUI design document.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.4', 'The operator shall be able to activate a detailed incident state window for the selected incident by double left clicking on the icon. This action shall cause a circle to be displayed over the incident icon for as long as the detailed device status window is displayed for that incident.');
 INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.2.1.10.5', 'The operator shall be able to activate an edit window for the selected incident by right clicking on the icon. This action shall cause a circle to be displayed over the incident icon for as long as the edit window is displayed for that incident.');
+/* Map Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.1.1', 'The map window shall display the HOV lanes, the adjacent lanes of I-15 and SR 163, crossing streets and their interchange, if any, and icons.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.1.2', 'Three map windows shall be provided: one showing the entire length of the HOV lanes, one showing a detail of the south end of the HOV lanes and one showing a detail of the North end of the HOV lanes.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.1.3', 'Caltrans shall be able to create new maps using a commercial off the shelf (COTS) software package and place device icons on the map.');
+/* Command Toolbar */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.2.1', 'The Command Toolbar shall allow a user to select a window for display.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.2.2', 'The Command Toolbar shall always be displayed to the user.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.2.3', 'The Command Toolbar shall only display valid commands.');
+/* Device Control Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.1', 'The device control window shall display a three level menu allowing the operator to select the device to be commanded.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.1.1', 'The first level shall be the device type selection: CMS, draw light, gate, pop-up, etc.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.1.2', 'The second level shall be a list of specific devices of that type that are available to be commanded.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.1.3', 'The third level shall be a list of available commands (if any) for the selected device.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.2', 'Once the device type, device and command have been selected via the menu system the operator shall be presented with a form for the completion of any parameters for the command.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.3', 'The device command completion form shall have a button labeled “Perform Action” to allow the operator to execute the command.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.3.1', 'The “Perform Action” button shall be grayed out and unselectable until the device command form has been filled out.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.3.2', 'The “Perform Action” button shall log the command submittal.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.1.4', 'The device command completion form shall have a button labeled “Cancel Command” to allow the operator to stop the completion of the command.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.2.1', 'Any device control action that involves human safety shall use a confirmation dialog to validate the action.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.2.1.1', 'All device actions defined in the detailed design shall be classified as either involving human safety or not involving human safety.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.2.1.2', 'The default classification shall be that the device action involves human safety.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.2.2', 'The required validation method (if any) shall be displayed with the confirmation dialog.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.2.3', 'The confirmation dialog shall specify the action and prompt the user for a YES or NO to continue.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.2.4', 'The confirmation dialog shall default to NO.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.3', 'The action and the confirmation shall be displayed in the System Log window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.4', 'The device control window shall display any returned device status resulting from the device control command.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.3.5', 'If the requested device control command results in multiple steps at the field control level, the intermediate steps and their status shall be displayed in the device control window.');
+/* Summary Device Status Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.4.1', 'The summary device status window shall display a text and graphic summary presentation on the status of the selected device or group of devices.');
+/* Detailed Device Status Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.1', 'The detailed device status window shall display a text and graphic presentation on the status of the selected device or group of devices.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.2', 'The detailed device status window shall allow a user to select more detailed status information on an individual device.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.3', 'The operator shall be able to call up a device control window for any device shown on the device status window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.4', 'The summary device status window shall have a menu bar with File and Help as a minimum.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.4.1', 'The File menu item shall include an option to open a command window for the selected device.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.4.2', 'The File menu item shall include an option to open a detailed status window for the selected device.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.4.3', 'The File menu item shall include an option to print the summary device status page.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.4.4', 'The Help menu item shall activate the on-line help system.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.5', 'The summary device status window shall display a list of all devices along with a miniature icon of the device color coded with the device status. The color-coding shall match the color-coding described above.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.6', 'The summary device status window shall list the full name of each device.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.7', 'The summary device status window shall list the most reason error code and description for the device if the device is failed or experiencing errors.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.5.8', 'The summary device status window shall list the time and date of the last device status check.');
+/* Incident Entry / Edit Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.', 'This window shall enable the user to enter and edit an incident report to displayed as an icon on the map window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.1', 'A user shall be able to enter information on an incident, including, location, description and time period.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.2', 'A user shall be able to edit or close an existing incident.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.3', 'Entry or editing of an incident shall be recorded in the Daily Diary along with the time and the user performing the entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4', 'The Incident Entry / Edit Window shall have a menu bar with File, Edit, Report, and Help.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4.1', 'The File menu item shall have an option to create a new incident entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4.2', 'The File menu item shall have an option to print the Incident Entry / Edit Window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4.3', 'The Edit menu item shall have an option to append information to an incident entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4.4', 'The Edit menu item shall have an option to update the information on an incident entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4.5', 'The report menu shall have an option to print a report on all active incidents.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4.6', 'The report menu shall have an option to print a report on all entries associated with a specific incident.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.6.4.7', 'The Help menu item shall invoke the Help system.');
+/* Daily Diary Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.7.1', 'Operator command and confirmation actions shall be recorded in the Daily diary');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.7.2', 'The Daily Diary Window shall show the date and time of the entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.7.3', 'The Daily Diary Window shall show the ID of the operator for each entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.7.4', 'The Daily Diary Window shall provide a button (labeled Diary Entry) to activate a screen (Diary Entry) for the operator to make a Diary entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.7.5', 'The Diary Entry screen shall provide the operator with a form to make an entry in the Daily Diary.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.7.6', 'The current date, time and operator ID shall be displayed on the form in read-only display fields.');
+/* Problem Work Order Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1', 'The Problem Work Order Window shall allow the User to enter, modify and close information about a system failure.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1', 'The Problem Work Order Window shall have a menu bar with File, Edit, Report and Help.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1.1', 'The File menu item shall have an option to create a new system failure entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1.2', 'The File menu item shall have an option to print the Problem Work Order Window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1.3', 'The File menu item shall have an option to close the Problem Work Order Window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1.4', 'The Edit menu item shall have an option to add an update to an existing system failure.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1.5', 'The Report menu item shall include an option to print all entries associated with a specific device.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1.6', 'The Report menu item shall include an option to print a summary of all active system failures.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.8.1.1.7', 'The Report menu item shall include an option to print all entries associated with a specific system failure.');
+/* Scheduler Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.9.1', 'The Scheduler Window shall allow the user to enter, modify, delete and view information on events that affect the facility.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.9.2', 'The user shall be able to search for specific events by date and type.');
+/* Paging Contact Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.10.1', 'The Paging Contact Window shall allow an authorized user to enter, modify and delete a paging profile for various points of contact.');
+/* Macro Editor Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.1', 'The user shall select an existing macro to be edited or to define a new macro.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.2', 'The operation being implemented shall determine which operations are permissible.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.3', 'The Macro editor shall allow the user to insert a device action into a macro.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.4', 'The Macro editor shall allow the user to delete a device action from a macro. ');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.5', 'The operator shall be able to modify the order of the actions by selecting an action with the mouse and dragging the action to a new location in the macro.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.6', 'The Macro editor shall allow the user to specify a security level on a macro.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.7', 'The Macro editor shall allow the user to specify a minimum delay time between device actions.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.8', 'The Macro editor shall allow the user to specify that operator confirmation is required prior to starting a device action.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.9', 'The Macro editor shall allow the user to specify a valid time of activation for the macro.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.11.10', 'The Macro editor shall allow the user to specify the expected amount of time an action will take to complete.');
+/* Macro Control Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.12.1', 'The Macro Control Window shall provide a File entry on the menu bar.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.12.2', 'The Macro Control Window shall provide an Open entry under the File entry on the menu bar.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.12.3', 'The Macro Control Window shall provide a button (labeled Start) to start the macro.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.12.4', 'The Macro Control Window shall provide a button (labeled Pause) to pause the macro execution.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.12.5', 'The Macro Control Window shall provide a button (labeled Stop) to halt execution of the macro execution.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.12.6', 'The Macro Control Window shall provide a button (labeled Next) to execute the next action in the sequence.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.12.7', 'The Macro Control Window shall provide a counter showing the elapsed time since the macro execution was started.');
+/* Logon Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.13.1', 'The Logon window shall enable a user to enter a user name and password.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.13.3', 'The Logon window shall allow the user to accept or reject command authority for the system.');
+/* User Identification Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.14.1', 'The User Identification Window shall display the name of the user logged at this workstation, the location of the workstation, the name and location of the user with command control (the operator) and the date and time.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.14.2', 'The User Identification Window shall always be displayed.');
+/* User Administration Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.15.1', 'The User Administration Window shall allow a properly authorized operator to enter/modify/delete user names, passwords, user security level and use display preferences.');
+/* Report Windows */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.16.1', 'The Report Windows shall allow the user to select and view reports generated by the system.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.16.2', 'The Report Window shall allow the user to select the information to be included in a report format, including the time frame the report is to cover.');
+/* Scenario Editor Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.17.1', 'The Scenario Editor shall provide the operator with the ability to create new scenarios.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.17.2', 'The Scenario Editor shall provide the operator with the ability to modify existing scenarios.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.17.3', 'The Scenario Editor shall provide the operator with the ability to define the state of all devices: operational, failed, unknown.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.17.4', 'The Scenario Editor shall provide the operator with the ability to define equipment malfunctions by an offset time from the start of the scenario.');
+/* Scenario Control Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.18.1', 'The Scenario Control Window shall provide the training user the ability to start a scenario.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.18.2', 'The Scenario Control Window shall provide the training user the ability to pause a scenario.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.18.3', 'The Scenario Control Window shall provide the training user the ability to restart a scenario.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.18.4', 'The Scenario Control Window shall provide the training user the ability to correct device malfunctions.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.18.5', 'The Scenario Control Window shall provide the training user the ability to create device malfunctions.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.18.6', 'The Scenario Control Window shall provide the training user the ability to see all commands issued by the trainee user.');
+/* Help Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('3.3.19.1', 'The Help Window shall allow the user to request and display help information.');
+/* Icons */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.1.1', 'All icons shall be configurable to display a minimum of information as text with the icon.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.1.1.1', 'The icons shall be configurable to display the text with relationship to the icon at the top, bottom, left or right.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.1.2', 'All icons shall be configurable to display four colors: green, yellow, red, or gray.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.1.2.1', 'For all icons the color gray shall represent no data available, that is, communication with the device is not possible.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.1.2.2', 'For all icons except the Loop Detector icon, the other colors shall represent the status of the device, with the color green indicating a working device, red indicating a failed device, and yellow indicating a partially failed device.');
+/* Form Entry */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.2.1', 'The form shall open with the cursor in the top left entry field.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.2.2', 'The TAB key shall move the cursor in a Z pattern from left to right and top to bottom through the fields of the form.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.2.3', 'All form screens shall have a button on the screen to clear all user entry from the fields of the form. This button shall be labeled “CLEAR”.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.2.4', 'All form screens shall have a button on the screen to save the data entered into the fields of the form. This button shall be labeled “SAVE”.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.2.5', 'All form screens shall have a button on the screen to exit the form entry process. This button shall be labeled “EXIT”.');
+/* Field Validation */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.3.1', 'If a user entry must be one of several defined items, then the system shall present the user with the list of items from which to select the entry.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.3.1.1', 'The form window shall be sized to display a minimum of 5 items from the selection list.');
+/* Error Message Window */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.4.1', 'Error messages shall be displayed in a scrollable window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.4.2', 'The user shall be able to select the fields available for display in the error window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.4.3', 'The user shall be able to select the field for sorting the display in the error window.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.4.4', 'The user shall be able to select the sort order for the display in the error window.');
+/* Fonts */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.5.1', 'A maximum of 3 fonts shall be used in the user interface. These fonts shall be defined in the interface design.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.5.2', 'A maximum of 4 font sizes shall be used in the user interface.');
+/* Combination Boxes */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.6.1', 'A window combination box shall display a minimum of 4 items and a maximum of 9 items when it is expanded.');
+/* Hot Keys */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.7.1', 'The Ctrl-O key combination shall execute the Open command in any window where Open is a valid action.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.7.2', 'The Ctrl-S key combination shall execute the Save command in any window where Save is a valid action.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.7.3', 'The Ctrl-P key combination shall execute the Print command in any window where Print is a valid action.');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.7.4', 'The F1 key shall invoke the Help system.');
+/* User Login */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.8.1', 'User login shall be controlled by the operating system.');
+/* Window Configuration */
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.9.1', 'When a user logs off of the system, the configuration of open windows shall be saved');
+INSERT INTO requirement (requirementNumber, requirementText) VALUES ('4.1.9.2', 'When a user logs on to the system, the last saved configuration of open windows for that user shall be displayed.');
 /* PRIORITY */
 INSERT INTO priority (priorityText) VALUE ('High');
 INSERT INTO priority (priorityText) VALUE ('Medium-High');
@@ -219,4 +375,132 @@ VALUES (1, 1, 1),
 (78, 1, 1),
 (79, 1, 1),
 (80, 1, 1),
-(81, 1, 1);
+(81, 1, 1),
+(82, 1, 1),
+(83, 1, 1),
+(84, 1, 1),
+(85, 1, 1),
+(86, 1, 1),
+(87, 1, 1),
+(88, 1, 1),
+(89, 1, 1),
+(90, 1, 1),
+(91, 1, 1),
+(92, 1, 1),
+(93, 1, 1),
+(94, 1, 1),
+(95, 1, 1),
+(96, 1, 1),
+(97, 1, 1),
+(98, 1, 1),
+(99, 1, 1),
+(100, 1, 1),
+(101, 1, 1),
+(102, 1, 1),
+(103, 1, 1),
+(104, 1, 1),
+(105, 1, 1),
+(106, 1, 1),
+(107, 1, 1),
+(108, 1, 1),
+(109, 1, 1),
+(110, 1, 1),
+(111, 1, 1),
+(112, 1, 1),
+(113, 1, 1),
+(114, 1, 1),
+(115, 1, 1),
+(116, 1, 1),
+(117, 1, 1),
+(118, 1, 1),
+(119, 1, 1),
+(120, 1, 1),
+(121, 1, 1),
+(122, 1, 1),
+(123, 1, 1),
+(124, 1, 1),
+(125, 1, 1),
+(126, 1, 1),
+(127, 1, 1),
+(128, 1, 1),
+(129, 1, 1),
+(130, 1, 1),
+(131, 1, 1),
+(132, 1, 1),
+(133, 1, 1),
+(134, 1, 1),
+(135, 1, 1),
+(136, 1, 1),
+(137, 1, 1),
+(138, 1, 1),
+(139, 1, 1),
+(140, 1, 1),
+(141, 1, 1),
+(142, 1, 1),
+(143, 1, 1),
+(144, 1, 1),
+(145, 1, 1),
+(146, 1, 1),
+(147, 1, 1),
+(148, 1, 1),
+(149, 1, 1),
+(150, 1, 1),
+(151, 1, 1),
+(152, 1, 1),
+(153, 1, 1),
+(154, 1, 1),
+(155, 1, 1),
+(156, 1, 1),
+(157, 1, 1),
+(158, 1, 1),
+(159, 1, 1),
+(160, 1, 1),
+(161, 1, 1),
+(162, 1, 1),
+(163, 1, 1),
+(164, 1, 1),
+(165, 1, 1),
+(166, 1, 1),
+(167, 1, 1),
+(168, 1, 1),
+(169, 1, 1),
+(170, 1, 1),
+(171, 1, 1),
+(172, 1, 1),
+(173, 1, 1),
+(174, 1, 1),
+(175, 1, 1),
+(176, 1, 1),
+(177, 1, 1),
+(178, 1, 1),
+(179, 1, 1),
+(180, 1, 1),
+(181, 1, 1),
+(182, 1, 1),
+(183, 1, 1),
+(184, 1, 1),
+(185, 1, 1),
+(186, 1, 1),
+(187, 1, 1),
+(188, 1, 1),
+(189, 1, 1),
+(190, 1, 1),
+(191, 1, 1),
+(192, 1, 1),
+(193, 1, 1),
+(194, 1, 1),
+(195, 1, 1),
+(196, 1, 1),
+(197, 1, 1),
+(198, 1, 1),
+(199, 1, 1),
+(200, 1, 1),
+(201, 1, 1),
+(202, 1, 1),
+(203, 1, 1),
+(204, 1, 1),
+(205, 1, 1),
+(206, 1, 1),
+(207, 1, 1),
+(208, 1, 1),
+(209, 1, 1);
